@@ -24,4 +24,7 @@ body {
   height: 200px;
   background-color: #fed90f;
   border: 1px solid #000;
+  top: 10px;
+  border-radius: 60%/50%;
+  transform: rotate(-18deg);
 }
