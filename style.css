@@ -1,9 +1,18 @@
+:root {
+  --bord-lg: 1px solid #000; 
+  --bord-dk: 2px solid #000;
+  --yellow: #fed90f;
+  --mouth: #d1b271;
+  --black: #000;
+  --white: #fff;
+}
+
 body {
   margin: 0;
   padding: 0;
   background: linear-gradient(
-    skyblue,
-    green
+    rgb(27, 171, 227),
+    rgb(1, 62, 1)
   );
   height: 100vh;
   display: flex;
@@ -18,177 +27,170 @@ body {
   background-color: gainsboro;
 }
 
-.forehead {
+.forehead, .hair-1, .hair-2,
+.right-eye, .right-pupil, .left-eye, .left-pupil,
+.face-side-1, .face-side-2, .nose,
+.mouth, .mouth-1, .mouth-2, .mouth-3, .mouth-4,.mouth-5,
+.neck, .collar-left, .collar-right {
   position: absolute;
+}
+
+.forehead, .face-side-1, .face-side-2, .nose, .neck {
+  background-color: var(--yellow);
+}
+
+.forehead {
   width: 170px;
   height: 200px;
-  background-color: #fed90f;
-  border: 1px solid #000;
+  border: var(--bord-lg);
   top: 10px;
   border-radius: 60%/50%;
   transform: rotate(-18deg);
 }
 
-.hair-1 {
-  position: absolute;
+.hair-1, .hair-2 {
   width: 80px;
   height: 70px;
-  border-top: 2px solid #000;
-  top: 15px;
+  border-top: var(--bord-dk);
   border-radius: 50%;
+}
+
+.hair-1 {
+  top: 15px;
   transform: rotate(-40deg);
 }
 
-.hair-2 {
-  position: absolute;
-  width: 80px;
-  height: 70px;
-  border-top: 2px solid #000;
+.hair-2 {  
   left: 10px;
-  border-radius: 50%;
   transform: rotate(-30deg);
 }
 
-.right-eye {
-  position: absolute;
+.right-eye, .left-eye {
   width: 75px;
   height: 75px;
-  background-color: #fff;
-  border: 1px solid #000;
+  background-color: var(--white);
+  border: var(--bord-lg);
   border-radius: 50%;
+}
+
+.right-pupil, .left-pupil {
+  width: 9px;
+  height: 9px;
+  background-color: var(--black);
+  border-radius: 50%;
+  top: 40px;
+}
+
+.right-eye {
   left: 120px;
   top: 110px;
 }
 
 .right-pupil {
-  position: absolute;
-  width: 9px;
-  height: 9px;
-  background-color: #000;
-  border-radius: 50%;
   left: 35px;
-  top: 40px;
 }
 
 .left-eye {
-  position: absolute;
-  width: 75px;
-  height: 75px;
-  background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 50%;
   left: 60px;
   top: 115px;
 }
 
 .left-pupil {
-  position: absolute;
-  width: 9px;
-  height: 9px;
-  background-color: #000;
-  border-radius: 50%;
   left: 25px;
-  top: 40px;
 }
 
 .face-side-1 {
-  position: absolute;
   width: 140px;
   height: 60px;
-  background-color: #fed90f;
   top: 185px;
   left: 30px;  
 }
 
 .face-side-2 {
-  position: absolute;
   width: 40px;
   height: 60px;
-  background-color: #fed90f;
   top: 165px;
   left: 22px;
   transform: rotate(-11deg);
-  border-left: 1px solid #000;
+  border-left: var(--bord-lg);
 }
 
 .nose {
-  position: absolute;
   width: 60px;
   height: 32px;
-  background-color: #fed90f;
   top: 175px;
   left: 130px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  border-right: 1px solid #000;
+  border-top: var(--bord-lg);
+  border-bottom: var(--bord-lg);
+  border-right: var(--bord-lg);
+}
+
+.mouth, .mouth-1, .mouth-2, .mouth-3, .mouth-4, .mouth-5 {
+  background-color: var(--mouth);
 }
 
 .mouth {
-  position:  absolute;
   width: 115px;
   height: 120px;
-  background-color: #d1b271;
   top: 207px;
   left: 60px;
   border-radius: 50%;
-  border: 1px solid #000;
+  border: var(--bord-lg);
 }
 
 .mouth-1 {
-  position: absolute;
   width: 20px;
   height: 30px;
-  background-color: #d1b271;
   top: 62px;
   left: 98px;
   border-radius: 50%;
-  border-right: 1px solid #000;
+  border-right: var(--bord-lg);
   transform: rotate(15deg);
 }
 
 .mouth-2 {
-  position: absolute;
   width: 120px;
   height: 60px;
-  background-color: #d1b271;
   top: 20px;
   left: 30px;
   border-radius: 60%;
-  border-bottom: 1px solid #000;
+  border-bottom: var(--bord-lg);
   transform: rotate(-6deg);
 }
 
 .mouth-3 {
-  position: absolute;
   width: 35px;
   height: 48px;
-  background-color: #d1b271;
   top: 230px;
   left: 165px;
   border-radius: 10%;
-  border-top: 1px solid #000;
+  border-top: var(--bord-lg);
   transform: rotate(40deg);
 }
 
 .mouth-4 {
-  position: absolute;
   width: 60px;
   height: 30px;
-  background-color: #d1b271;
   top: 200px;
   left: 130px;
-  border-right: 1px solid #000;
+  border-right: var(--bord-lg);
   border-top-right-radius: 70%;
 }
 
 .mouth-5 {
-  position: absolute;
   width: 30px;
   height: 30px;
-  background-color: #d1b271;
   top: 260px;
   left: 80px;
 }
 
+.neck {
+  width: 125px;
+  height: 150px;
+  top: 200px;
+  left: 28px;
+  border-left: var(--bord-lg);
+  border-right: var(--bord-lg);
+}
