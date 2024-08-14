@@ -11,3 +11,17 @@ body {
   align-items: center;
 }
 
+.head {
+  position: relative;
+  width: 215px;
+  height: 405px;
+  background-color: gainsboro;
+}
+
+.forehead {
+  position: absolute;
+  width: 170px;
+  height: 200px;
+  background-color: #fed90f;
+  border: 1px solid #000;
+}
